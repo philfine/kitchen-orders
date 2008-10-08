@@ -17,6 +17,7 @@ Kitchen.Order = SC.Record.extend(
 
 	properties: ['orderer', 'table'],
 	time: 0,
+	display_items: YES,
 
 	items: SC.Record.hasMany('Kitchen.Item', 'order'),	
 

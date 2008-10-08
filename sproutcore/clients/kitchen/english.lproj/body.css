@@ -1,14 +1,3 @@
-body {
- position: absolute ;
- left: 0;
- right: 0;
- top: 0;
- bottom: 0;
- padding: 0;
- margin: 0;
- overflow: hidden ;
-}
-
 #workspace {
 	position: absolute;
 	left: 0px;
@@ -35,14 +24,5 @@ body {
 	position: absolute;
 	left: 255px;
 	bottom: 35px;
-}
-
-.orders .order_item_quantity {
-	float: left;
-	padding-left: 10px;
-}
-.orders .order_item_name {
-	float: right;
-	padding-right: 15px;
 }
 
