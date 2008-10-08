@@ -1,0 +1,48 @@
+body {
+ position: absolute ;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ padding: 0;
+ margin: 0;
+ overflow: hidden ;
+}
+
+#workspace {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 35px;
+	top: 0px;
+}
+
+#orders_scrool {
+	width: 250px;
+	border: 0px;
+	bottom: 35px;
+}
+
+#orders {
+	background-color: #ffe;
+}
+
+#warkspace_divider {
+	left: 250px;
+}
+
+#tables {
+	position: absolute;
+	left: 255px;
+	bottom: 35px;
+}
+
+.orders .order_item_quantity {
+	float: left;
+	padding-left: 10px;
+}
+.orders .order_item_name {
+	float: right;
+	padding-right: 15px;
+}
+

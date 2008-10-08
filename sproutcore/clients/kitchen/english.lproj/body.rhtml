@@ -1,0 +1,26 @@
+<% content_for('body') do %>
+ 
+  <% split_view :workspace do %>
+ 
+        <% scroll_view :orders_scrool, :max_thickness => 400,
+                                        :min_thickness => 100 do %>
+                <%= source_list_view :orders,
+						:group => 'order',
+						:group_title_key => 'info',
+						:content_value_key => 'name',
+						:content_unread_count_key => 'quantity',
+						:group_visible_key => true,
+                        :bind => {
+                                :content => 'Kitchen.ordersListController.arrangedObjects',
+                                :selection => 'Kitchen.ordersListController.selection'
+                } %>
+        <% end %>
+ 
+        <%= split_divider_view :warkspace_divider %>
+ 
+        <% view :tables do %>
+          BBBB
+        <% end %>
+ 
+  <% end %>
+<% end %>
