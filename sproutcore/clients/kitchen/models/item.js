@@ -32,8 +32,9 @@ Kitchen.Item = SC.Record.extend(
 			this.set('quantity', quant - 1);
 			this.set('produced', this.get('produced') + 1);			
 		}
-	}.property('quantity', 'produced'),
+	},
 
+/*
 	html_info_update: function () {
 		var html = [];
 		html.push ('<div class="orders_item">');
@@ -43,7 +44,7 @@ Kitchen.Item = SC.Record.extend(
 		
 		this.set('html_info', html.join(''));
 	}.observes('quantity', 'name').property('html_info'),
-	
+*/	
   // TODO: Add your own code here.
 
 }) ;

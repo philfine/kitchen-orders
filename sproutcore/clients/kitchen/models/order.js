@@ -32,13 +32,14 @@ Kitchen.Order = SC.Record.extend(
 	tick: function() {
 		this.set('awaiting', this.get('awaiting') + 1);
 	}.property('awaiting'),
-	
+	/*
 	_timer: SC.Timer.schedule( {
 		target: this,
 		action: 'tick', 
 		repeats: YES, 
 		interval: 1000
 	}),
+	*/
   // TODO: Add your own code here.
 
 }) ;

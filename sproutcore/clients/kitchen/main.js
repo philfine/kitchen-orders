@@ -33,5 +33,6 @@ function main() {
   // ex: Kitchen.contactsController.set('content',Kitchen.contacts);
   var recordCollection = Kitchen.Item.collection();	
   Kitchen.ordersListController.set('content', recordCollection);
+  Kitchen.ordersListController.set('conditions', { quantity: 1 });
   recordCollection.refresh();
 } ;
