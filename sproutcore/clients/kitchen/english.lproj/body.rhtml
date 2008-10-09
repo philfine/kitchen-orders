@@ -8,12 +8,12 @@
 						:group => 'order',
 						:group_title_key => 'info',
 						:content_value_key => 'name',
-						:content_unread_count_key => 'quantity',
 						:group_visible_key => 'display_items',
                         :bind => {
                                 :content => 'Kitchen.ordersListController.arrangedObjects',
-                                :selection => 'Kitchen.ordersListController.selection'
-                } %>
+                                :selection => 'Kitchen.ordersListController.selection',
+								:action => 'Kitchen.ordersListController.add_to_selection_list',
+                		} %>
         <% end %>
  
         <%= split_divider_view :warkspace_divider %>

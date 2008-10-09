@@ -19,8 +19,21 @@ Kitchen.Item = SC.Record.extend(
 	properties: ['quantity', 'name'],
 	state: 'NotSeen',  // 'Preparing', 'Done', 'Delivered'
 	
+	dispatched: 0,
+	produced: 0,
+	
 	orderType: 'Kitchen.Order',
 	
+	produce_one_element: function ()
+	{
+		var quant = this.get('quantity');
+		if(quant > 0)
+		{
+			this.set('quantity', quant - 1);
+			this.set('produced', this.get('produced') + 1);			
+		}
+	}.property('quantity', 'produced'),
+
 	html_info_update: function () {
 		var html = [];
 		html.push ('<div class="orders_item">');

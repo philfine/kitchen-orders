@@ -1,5 +1,5 @@
 // ==========================================================================
-// Kitchen.ReceiptController
+// Kitchen.DispatchOrderController
 // ==========================================================================
 
 require('core');
@@ -8,15 +8,14 @@ require('core');
 
   (Document Your View Here)
 
-  @extends SC.ObjectController
+  @extends SC.CollectionController
   @author AuthorName
   @version 0.1
   @static
 */
-Kitchen.receiptController = SC.ObjectController.create(
-/** @scope Kitchen.receiptController */ {
+Kitchen.dispatchOrderController = SC.CollectionController.create(
+/** @scope Kitchen.dispatchOrderController */ {
 
-	contentBinding: 'Kitchen.ordersListController.selection',
   // TODO: Add your own code here.
 
 }) ;

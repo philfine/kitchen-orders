@@ -18,4 +18,9 @@ Kitchen.ordersListController = SC.CollectionController.create(
 
   // TODO: Add your own code here.
 
+	add_to_selection_list: function (target, event) {
+		var item = target.get('content');
+		item.produce_one_element();
+	},
+
 }) ;

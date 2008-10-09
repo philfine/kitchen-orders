@@ -22,9 +22,23 @@ Kitchen.Order = SC.Record.extend(
 	items: SC.Record.hasMany('Kitchen.Item', 'order'),	
 
 	info_update: function() {
-		this.info = "Table : " + this.get('table') + " - " + this.get('orderer');
-	}.observes('table', 'orderer').property('info'),
-
+		this.info = "Table : " + this.get('table');
+		this.info += " - " + this.get('orderer');
+		this.info += " - " + this.get('awaiting') + " min";
+	}.observes('table', 'orderer', 'awaiting').property('info'),
+	
+	awaiting: 0,
+	
+	tick: function() {
+		this.set('awaiting', this.get('awaiting') + 1);
+	}.property('awaiting'),
+	
+	_timer: SC.Timer.schedule( {
+		target: this,
+		action: 'tick', 
+		repeats: YES, 
+		interval: 1000
+	}),
   // TODO: Add your own code here.
 
 }) ;
