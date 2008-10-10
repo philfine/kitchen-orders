@@ -9,6 +9,7 @@
 						:content_value_key => 'name',
 						:content_unread_count_key => 'quantity',
 						:group_visible_key => 'display_items',
+						:act_on_select => true,
                         :bind => {
                                 :content => 'Kitchen.ordersListController.arrangedObjects',
                                 :selection => 'Kitchen.ordersListController.selection',
@@ -23,6 +24,7 @@
 					:content_value_key => 'name',
 					:content_unread_count_key => 'produced',
 					:group_visible_key => 'display_items',
+					:act_on_select => true,
 	                :bind => {
 	                        :content => 'Kitchen.dispatchController.arrangedObjects',
 	                        :selection => 'Kitchen.dispatchController.selection',
@@ -30,9 +32,5 @@
 	        		} %>
 		<% end %>
 		
-        <% view :tables do %>
-          BBBB
-        <% end %>
- 
   <% end %>
 <% end %>

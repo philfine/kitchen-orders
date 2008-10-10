@@ -31,6 +31,7 @@ function main() {
 
   // TODO: Set the content property on your primary controller
   // ex: Kitchen.contactsController.set('content',Kitchen.contacts);
+
   var recordCollection = Kitchen.Item.collection();	
   Kitchen.ordersListController.set('content', recordCollection);
   Kitchen.ordersListController.set('conditions', { isVisibleInOrdersList: true });

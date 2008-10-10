@@ -6,13 +6,13 @@
 						:width => 100,
 						:label => 'Cancel', 
 						:bind => {
-							:is_enabled => 'Kitchen.dispatchController.arrangedObjects.length'
+							:enabled => 'Kitchen.dispatchController.arrangedObjects'
 						} %>
 		<%= button_view :dispatch_button, 
 						:class => 'fix_button',
 						:label => 'Dispatch', 
 						:bind => {
-							:is_enabled => 'Kitchen.dispatchController.arrangedObjects.length'
+							:enabled => 'Kitchen.dispatchController.arrangedObjects'
 						} %>
 		<% end %>
 	<% end %>

@@ -17,7 +17,7 @@ Kitchen.dispatchController = SC.CollectionController.create(
 /** @scope Kitchen.dispatchController */ {
 
   // TODO: Add your own code here.
-	remove_from_dispatch_list: function (target, event) {
+	remove_from_dispatch_list: function (event, target) {
 		var item = target.get('content');
 		item.set('produced', item.get('produced') - 1);
 		item.set('quantity', item.get('quantity') + 1);
