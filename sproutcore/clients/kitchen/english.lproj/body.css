@@ -7,13 +7,28 @@
 }
 
 #orders_scrool {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	width: 250px;
 	border: 0px;
-	bottom: 35px;
+	bottom: 0px;
+}
+
+#dispatch_scrool {
+	position: absolute;
+	left:255px;
+	top: 0px;
+	bottom: 0px;
+	width: 250px;
+	border: 0px;
 }
 
 #orders {
-	background-color: #ffe;
+	background-color: #ffc;
+}
+#dispatch {
+	background-color: #ffc;
 }
 
 #warkspace_divider {
@@ -26,3 +41,15 @@
 	bottom: 35px;
 }
 
+.sc-theme .sc-footer .fix_button {
+	top: 12px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+.dispatch_align {
+	position: absolute;
+	left: 255px;
+	width: 250px;
+	padding-right: 10px;
+}

@@ -1,4 +1,19 @@
 <% content_for('body') do %>
-	<% view :footer, :class => 'sc-footer sc-square' do %>
+	<% view :footer, :class => 'sc-footer sc-square-theme' do %>
+		<% view :class => 'dispatch_allign' do %>
+		<%= button_view :cancel_dispatch_button, 
+						:class => 'fix_button',
+						:width => 100,
+						:label => 'Cancel', 
+						:bind => {
+							:is_enabled => 'Kitchen.dispatchController.arrangedObjects.length'
+						} %>
+		<%= button_view :dispatch_button, 
+						:class => 'fix_button',
+						:label => 'Dispatch', 
+						:bind => {
+							:is_enabled => 'Kitchen.dispatchController.arrangedObjects.length'
+						} %>
+		<% end %>
 	<% end %>
 <% end %>

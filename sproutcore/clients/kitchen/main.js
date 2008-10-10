@@ -33,6 +33,12 @@ function main() {
   // ex: Kitchen.contactsController.set('content',Kitchen.contacts);
   var recordCollection = Kitchen.Item.collection();	
   Kitchen.ordersListController.set('content', recordCollection);
-  Kitchen.ordersListController.set('conditions', { quantity: 1 });
+  Kitchen.ordersListController.set('conditions', { isVisibleInOrdersList: true });
   recordCollection.refresh();
+
+  var recordCollection1 = Kitchen.Item.collection();	
+  Kitchen.dispatchController.set('content', recordCollection1);
+  Kitchen.dispatchController.set('conditions', { isVisibleInDispatchList: true });
+  recordCollection1.refresh();
+
 } ;

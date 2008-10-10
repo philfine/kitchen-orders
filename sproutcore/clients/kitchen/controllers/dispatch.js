@@ -1,5 +1,5 @@
 // ==========================================================================
-// Kitchen.OrdersListController
+// Kitchen.DispatchController
 // ==========================================================================
 
 require('core');
@@ -13,15 +13,13 @@ require('core');
   @version 0.1
   @static
 */
-Kitchen.ordersListController = SC.CollectionController.create(
-/** @scope Kitchen.ordersListController */ {
+Kitchen.dispatchController = SC.CollectionController.create(
+/** @scope Kitchen.dispatchController */ {
 
   // TODO: Add your own code here.
-
-	add_to_dispatch_list: function (target, event) {
+	remove_from_dispatch_list: function (target, event) {
 		var item = target.get('content');
-		item.set('quantity', item.get('quantity') - 1);
-		item.set('produced', item.get('produced') + 1);
+		item.set('produced', item.get('produced') - 1);
+		item.set('quantity', item.get('quantity') + 1);
 	},
-
 }) ;

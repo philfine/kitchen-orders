@@ -1,9 +1,8 @@
 <% content_for('body') do %>
  
-  <% split_view :workspace do %>
- 
-        <% scroll_view :orders_scrool, :max_thickness => 400,
-                                        :min_thickness => 100 do %>
+  <% view :workspace do %>
+
+       	<% scroll_view :orders_scrool do %>
                 <%= source_list_view :orders,
 						:group => 'order',
 						:group_title_key => 'info',
@@ -13,12 +12,24 @@
                         :bind => {
                                 :content => 'Kitchen.ordersListController.arrangedObjects',
                                 :selection => 'Kitchen.ordersListController.selection',
-								:action => 'Kitchen.ordersListController.add_to_selection_list',
+								:action => 'Kitchen.ordersListController.add_to_dispatch_list',
                 		} %>
-        <% end %>
- 
-        <%= split_divider_view :warkspace_divider %>
- 
+       	<% end %>
+
+		<% scroll_view :dispatch_scrool do %>
+	        <%= source_list_view :dispatch,
+					:group => 'order',
+					:group_title_key => 'info',
+					:content_value_key => 'name',
+					:content_unread_count_key => 'produced',
+					:group_visible_key => 'display_items',
+	                :bind => {
+	                        :content => 'Kitchen.dispatchController.arrangedObjects',
+	                        :selection => 'Kitchen.dispatchController.selection',
+							:action => 'Kitchen.dispatchController.remove_from_dispatch_list',
+	        		} %>
+		<% end %>
+		
         <% view :tables do %>
           BBBB
         <% end %>

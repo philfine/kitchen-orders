@@ -34,6 +34,13 @@ Kitchen.Item = SC.Record.extend(
 		}
 	},
 
+	_compute_orders_list_visibility: function () {
+		this.set('isVisibleInOrdersList', this.get('quantity') > 0);
+	}.property('isVisibleInOrdersList').observes('quantity'),
+
+	_compute_dispatch_visibility: function () {
+		this.set('isVisibleInDispatchList', this.get('produced') > 0);
+	}.property('isVisibleInDispatchList').observes('produced'),
 /*
 	html_info_update: function () {
 		var html = [];
